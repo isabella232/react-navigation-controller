@@ -263,7 +263,7 @@ class NavigationController extends React.Component {
     } = options
     // Create a function that will be called once the
     this.__transitionViewsComplete = () => {
-      delete this.__transitionViewsComplete
+      // delete this.__transitionViewsComplete
       if (typeof onComplete === 'function') {
         onComplete()
       }
@@ -341,7 +341,7 @@ class NavigationController extends React.Component {
     }
     options = assign({}, defaults, options, { view })
     checkOptions('pushView', options)
-    if (this.__isTransitioning) return
+    // if (this.__isTransitioning) return
     const {transition} = options
     const [prev, next] = this.__viewIndexes
     let views = this.state.views.slice()
